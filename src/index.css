@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-navy: #24364B;
+    --color-olive: #68705A;
+    --color-beige: #E9DDC9;
+    --color-cream: #F7F2E8;
+    --color-camel: #B99568;
+    --color-warm-white: #FFFDF8;
+    --color-soft-brown: #765D49;
+    --color-burgundy: #6E3030;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: #F7F2E8;
+    color: #24364B;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-serif {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+
+  .font-script {
+    font-family: 'Alex Brush', cursive;
+  }
+}
+
+/* Custom Old Money & Paper Accents */
+.paper-pattern {
+  background-image: radial-gradient(rgba(118, 93, 73, 0.05) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+.old-money-border {
+  border: 1px solid rgba(185, 149, 104, 0.35);
+}
+
+.gold-glow {
+  box-shadow: 0 10px 30px -10px rgba(185, 149, 104, 0.25);
+}
+
+/* Custom sleek scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F7F2E8;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #B99568;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #765D49;
+}
+
+/* Animated cursive stroke dash animation */
+@keyframes drawStroke {
+  0% {
+    stroke-dashoffset: 1000;
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}
+
+.stroke-draw {
+  stroke-dasharray: 1000;
+  animation: drawStroke 3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Subtle Shimmer */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.shimmer-text {
+  background: linear-gradient(90deg, #24364B 0%, #B99568 50%, #24364B 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 6s infinite ease-in-out;
+}

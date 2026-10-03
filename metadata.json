@@ -1,0 +1,6 @@
+{
+  "name": "JAM SHAM ROOFTOP CAFE - Jamnagar",
+  "description": "Experience old money elegance at Jam Sham Rooftop Cafe in Jamnagar. Enjoy comfort food, great chai, artisan coffee, pizza, sizzling platters, and pure rooftop evening vibes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
